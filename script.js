@@ -52,7 +52,7 @@ function updateSalesComparisonChart() {
             labels: ['خرید', 'فروش'],
             datasets: [{
                 label: 'مقدار',
-                data: ['purchaseTotal', 'saleTotal'],
+                data: [purchaseTotal, saleTotal],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)'
