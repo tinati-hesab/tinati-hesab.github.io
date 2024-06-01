@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سیستم مدیریت مالی</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>سیستم مدیریت مالی</h1>
+        <div class="form-group">
+            <label for="invoiceType">نوع فاکتور:</label>
+            <select id="invoiceType">
+                <option value="purchase">خرید</option>
+                <option value="sale">فروش</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="itemName">نام کالا:</label>
+            <input type="text" id="itemName" placeholder="نام کالا را وارد کنید">
+        </div>
+        <div class="form-group">
+            <label for="amount">مقدار:</label>
+            <input type="number" id="amount" placeholder="مقدار فاکتور را وارد کنید">
+        </div>
+        <button onclick="addInvoice()">افزودن فاکتور</button>
+        <h2>فاکتورها</h2>
+        <ul id="invoicesList"></ul>
+        <div id="financialReport"></div>
+        <canvas id="salesComparisonChart"></canvas>
+    </div>
+    <footer>
+        <p>تهیه کننده: محمد طینتی &copy; 2024</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
