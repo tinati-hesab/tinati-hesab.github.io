@@ -42,8 +42,8 @@ function updateSalesComparisonChart() {
         salesComparisonChart.destroy();
     }
 
-    let purchaseTotal = invoices.filter(invoice => invoice.type === 'خرید').reduce((acc, curr) => acc + curr.amount, 0);
-    let saleTotal = invoices.filter(invoice => invoice.type === 'فروش').reduce((acc, curr) => acc + curr.amount, 0);
+    let purchaseTotal = invoices.filter(invoice => invoice.type === 'purchase').reduce((acc, curr) => acc + curr.amount, 0);
+    let saleTotal = invoices.filter(invoice => invoice.type === 'sale').reduce((acc, curr) => acc + curr.amount, 0);
 
     let ctx = document.getElementById('salesComparisonChart').getContext('2d');
     salesComparisonChart = new Chart(ctx, {
